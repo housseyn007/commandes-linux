@@ -1,62 +1,49 @@
 .
 └── shell
-    ├── banane
-    ├── fruits
-    │   ├── banane
-    │   ├── kiwi
-    │   ├── pamplemousse
-    │   ├── poire
-    │   └── pomme
-    ├── legumes
-    │   ├── carotte
-    │   ├── chou-fleur
-    │   └── chou-grave
     ├── planets
     │   ├── fictional
     │   │   ├── arrakis.jpeg
     │   │   ├── coruscant.jpeg
     │   │   └── cybertron.jpeg
     │   ├── inhabited
-    │   │   ├── earth.jpeg
-    │   │   ├── mars.jpeg
-    │   │   ├── mercury.jpeg
-    │   │   └── venus.jpeg
+    │   │   ├── arrakis.jpeg
+    │   │   ├── coruscant.jpeg
+    │   │   ├── cybertron.jpeg
+    │   │   └── earth.jpeg
     │   └── real
-    │       ├── dwarf-planets
-    │       ├── earth.jpeg
     │       ├── gas-giants
-    │       ├── jupiter.jpeg
-    │       ├── mars.jpeg
-    │       ├── mercury.jpeg
-    │       ├── neptune.jpeg
-    │       ├── saturn.jpeg
-    │       ├── telluric
-    │       ├── uranus.jpeg
-    │       └── venus.jpeg
-    ├── planets.zip
-    ├── poire
-    └── pomme
+    │       │   ├── jupiter.jpeg
+    │       │   ├── neptune.jpeg
+    │       │   ├── saturn.jpeg
+    │       │   └── uranus.jpeg
+    │       └── telluric
+    │           ├── earth.jpeg
+    │           ├── mars.jpeg
+    │           ├── mercury.jpeg
+    │           └── venus.jpeg
+    └── planets.zip
+
  ---------------------------------------------------------------------------------------------------
  
-sudo apt-get install -y wget unzip
-cd ~/quetes/shell/
-wget https://github.com/bhubr/bhubr.github.io/raw/master/wild/planets.zip
-unzip planets.zip
-eog planets
-mkdir planets
-cd  planets
-mkdir real fictional inhabited
-cd real
-mkdir telluric gas-giants dwarf-planets
-cd ~/quetes/shell/
-mv mercury.jpeg venus.jpeg earth.jpeg mars.jpeg jupiter.jpeg saturn.jpeg uranus.jpeg pluto.jpeg neptune.jpeg planets/real
-mv arrakis.jpeg coruscant.jpeg cybertron.jpeg planets/fictional/
-cd planets/real
-cp mercury.jpeg venus.jpeg earth.jpeg mars.jpeg ../inhabited/
- rm pluto.jpeg*
- cd ~/quetes/
- tree
- history
  
+housseyn@housseyn-ThinkPad-T510:~/quetes/shell$ wget https://github.com/bhubr/bhubr.github.io/raw/master/wild/planets.zip
+housseyn@housseyn-ThinkPad-T510:~/quetes/shell$ unzip planets.zip
+housseyn@housseyn-ThinkPad-T510:~$ cd ~/quetes/shell
+housseyn@housseyn-ThinkPad-T510:~/quetes/shell$ cd planets
+housseyn@housseyn-ThinkPad-T510:~/quetes/shell/planets$ mkdir -p real fictional inhabited
+housseyn@housseyn-ThinkPad-T510:~/quetes/shell/planets$ mkdir -p real/telluric real/gas-giants real/dwarf-planets
+housseyn@housseyn-ThinkPad-T510:~/quetes/shell/planets$ mv earth.jpeg jupiter.jpeg mars.jpeg mercury.jpeg neptune.jpeg pluto.jpeg saturn.jpeg uranus.jpeg venus.jpeg real/
+housseyn@housseyn-ThinkPad-T510:~/quetes/shell/planets$ mv arrakis.jpeg coruscant.jpeg cybertron.jpeg fictional/
+housseyn@housseyn-ThinkPad-T510:~/quetes/shell/planets$ cd real
+housseyn@housseyn-ThinkPad-T510:~/quetes/shell/planets/real$ mv jupiter.jpeg neptune.jpeg saturn.jpeg uranus.jpeg gas-giants/
+housseyn@housseyn-ThinkPad-T510:~/quetes/shell/planets/real$ mv earth.jpeg mars.jpeg mercury.jpeg venus.jpeg telluric/
+housseyn@housseyn-ThinkPad-T510:~/quetes/shell/planets/real$ mv pluto.jpeg dwarf-planets/
+housseyn@housseyn-ThinkPad-T510:~/quetes/shell/planets/real$ cd ..
+housseyn@housseyn-ThinkPad-T510:~/quetes/shell/planets$ cp fictional/arrakis.jpeg fictional/coruscant.jpeg fictional/cybertron.jpeg  inhabited/
+housseyn@housseyn-ThinkPad-T510:~/quetes/shell/planets$ cp real/telluric/earth.jpeg inhabited/
+housseyn@housseyn-ThinkPad-T510:~/quetes/shell/planets$ rm -r real/dwarf-planets/
+housseyn@housseyn-ThinkPad-T510:~/quetes/shell/planets$ cd ..
+housseyn@housseyn-ThinkPad-T510:~/quetes/shell$ cd ..
+housseyn@housseyn-ThinkPad-T510:~/quetes$ tree
 
 
