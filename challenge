@@ -1,0 +1,62 @@
+.
+└── shell
+    ├── banane
+    ├── fruits
+    │   ├── banane
+    │   ├── kiwi
+    │   ├── pamplemousse
+    │   ├── poire
+    │   └── pomme
+    ├── legumes
+    │   ├── carotte
+    │   ├── chou-fleur
+    │   └── chou-grave
+    ├── planets
+    │   ├── fictional
+    │   │   ├── arrakis.jpeg
+    │   │   ├── coruscant.jpeg
+    │   │   └── cybertron.jpeg
+    │   ├── inhabited
+    │   │   ├── earth.jpeg
+    │   │   ├── mars.jpeg
+    │   │   ├── mercury.jpeg
+    │   │   └── venus.jpeg
+    │   └── real
+    │       ├── dwarf-planets
+    │       ├── earth.jpeg
+    │       ├── gas-giants
+    │       ├── jupiter.jpeg
+    │       ├── mars.jpeg
+    │       ├── mercury.jpeg
+    │       ├── neptune.jpeg
+    │       ├── saturn.jpeg
+    │       ├── telluric
+    │       ├── uranus.jpeg
+    │       └── venus.jpeg
+    ├── planets.zip
+    ├── poire
+    └── pomme
+ ---------------------------------------------------------------------------------------------------
+ 
+sudo apt-get install -y wget unzip
+cd ~/quetes/shell/
+wget https://github.com/bhubr/bhubr.github.io/raw/master/wild/planets.zip
+unzip planets.zip
+eog planets
+mkdir planets
+cd  planets
+mkdir real fictional inhabited
+cd real
+mkdir telluric gas-giants dwarf-planets
+cd ~/quetes/shell/
+mv mercury.jpeg venus.jpeg earth.jpeg mars.jpeg jupiter.jpeg saturn.jpeg uranus.jpeg pluto.jpeg neptune.jpeg planets/real
+mv arrakis.jpeg coruscant.jpeg cybertron.jpeg planets/fictional/
+cd planets/real
+cp mercury.jpeg venus.jpeg earth.jpeg mars.jpeg ../inhabited/
+ rm pluto.jpeg*
+ cd ~/quetes/
+ tree
+ history
+ 
+
+
